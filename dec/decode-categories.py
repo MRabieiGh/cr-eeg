@@ -55,7 +55,7 @@ if index==0:
 
     subject = '.'
 else:
-    subject = subjects[index]
+    subject = subjects[index-1]
 
     # Load the data
     print(f'Loading data for subject : {subject}')
@@ -63,7 +63,7 @@ else:
     print(f'Data loaded successfully')
 
     print(f'Loading stimulus info')
-    with open('/Codes/cr-eeg/info.pkl', 'rb') as fp:
+    with open('/Codes/cr-eeg/utils/info.pkl', 'rb') as fp:
         info = pickle.load(fp)
     print(f'Stimulus info loaded successfully')
 
