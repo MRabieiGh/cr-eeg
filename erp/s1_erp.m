@@ -2,7 +2,7 @@ close all
 clear
 clc
 
-load(fullfile('..', 'eeg128.mat'))
+load(fullfile('..', 'utils', 'eeg128.mat'))
 
 %% Load Data
 data_path = 'G:\Data\EEG';
