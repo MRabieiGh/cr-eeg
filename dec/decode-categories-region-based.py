@@ -23,7 +23,6 @@ channels = pd.read_csv("/home/content/Desktop/cr/info/locations.txt", sep="\t",
 channels.to_pickle('/home/content/Desktop/cr/info/channels.pkl')
 
 
-# Sepehr is so DUMB!
 
 
 # Select subject name
