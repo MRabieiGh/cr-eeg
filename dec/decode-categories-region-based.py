@@ -187,7 +187,7 @@ else:
         cm = np.array(cm)
 
         # Save confusion matrix
-        os.makedirs(os.path.join(data_path, subject), exist_ok=True)
+        os.makedirs(os.path.join(fig_path, subject), exist_ok=True)
         np.save(os.path.join(data_path, subject, f'confusion-matrix-{region}.npy'), cm)
 
         time = d['time'].flatten()[np.arange(0, X_train.shape[2] - 50)] * 1000 + 25
