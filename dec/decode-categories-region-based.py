@@ -91,9 +91,7 @@ def plotLDA(subject, acc, recall, region, time, target):
 # In[179]:
 
 
-channelsInfo = pd.read_pickle('/home/content/Desktop/cr/info/channels.pkl')
-
-with open('/home/content/Desktop/cr/info/channels.pkl', 'rb') as fp:
+with open(data_path.replace('/data', '/info') + '/channels.pkl', 'rb') as fp:
     chInfo = pickle.load(fp)      
 regions = np.unique(chInfo['reg'])
 
@@ -168,7 +166,7 @@ else:
             channels = chInfo[chInfo['reg']==regions[regIDX - 1]].index
             region = regions[regIDX - 1]
         else:
-            channels = np.arange(len(channels['no.']))
+            channels = np.arange(len(chInfo['no.']))
             region = 'all regions'
         
         categories = info.cat.to_numpy()[:155]
