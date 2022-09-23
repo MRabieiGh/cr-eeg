@@ -1,0 +1,8 @@
+{
+    "data": "G:/Data/EEG",
+    "root": "G:/Codes/eeg-categorical-representation",
+    "out": {
+        "dec": "G:/Codes/cr-eeg/dec/Subjects",
+        "frq": "G:/Codes/cr-eeg/dec/Subjects"
+    }
+}

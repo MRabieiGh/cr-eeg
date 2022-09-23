@@ -69,4 +69,4 @@ figure('Position', [0, 0, 1920, 1080])
 ft_multiplotER(cfg, avgF, avgN);
 suptitle("Subject: " + subjectName)
 
-saveas(gcf, strcat(replace(lower(subjectName), ' ', '-'), '.png'))
+saveas(gcf, strcat(replace(lower(strtrim(subjectName)), ' ', '-'), '.png'))

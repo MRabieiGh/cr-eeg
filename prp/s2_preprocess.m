@@ -100,7 +100,7 @@ if ~isfile(fullfile(path, 'bad_components.csv'))
     tmp = ft_databrowser(cfg, components);
 end
 
-%%
+%% 
 if ~isfile(fullfile(path, 'bad_components.csv'))
     [index, ~] = listdlg('ListString', string(1:20));
 
@@ -112,7 +112,7 @@ end
 
 if ~isempty(bad_components)
     cfg = [];
-    cfg.components = bad_components;
+    cfg.component = bad_components;
     data = ft_rejectcomponent(cfg, components, data);
 end
 
