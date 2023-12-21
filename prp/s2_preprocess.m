@@ -38,12 +38,6 @@ if ~isfile(fullfile(path, 'bad_channels.csv'))
     tmp = ft_databrowser(cfg, data);
     [index, ~] = listdlg('ListString', layout.label(1:end-2));
     clear tmp
-    
-    cfg         = [];
-    cfg.method  = 'triangulation';
-    cfg.channel = data.label;
-    cfg.elec    = data.elec;
-    neighbours  = ft_prepare_neighbours(cfg, data);
 
     bad_channels = data.label(index);
     writecell(bad_channels, fullfile(path, 'bad_channels.csv'))
@@ -52,6 +46,12 @@ else
 end
 
 if ~isempty(bad_channels)
+    cfg         = [];
+    cfg.method  = 'triangulation';
+    cfg.channel = data.label;
+    cfg.elec    = data.elec;
+    neighbours  = ft_prepare_neighbours(cfg, data);
+    
     cfg            = [];
     cfg.method     = 'spline';
     cfg.badchannel = bad_channels;
